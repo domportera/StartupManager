@@ -64,7 +64,7 @@
                     </ListView.Resources>
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Иконка">
+                            <GridViewColumn Header="Icon">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <Image
@@ -74,25 +74,25 @@
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-                            <GridViewColumn DisplayMemberBinding="{Binding Name}">Имя файла</GridViewColumn>
-                            <GridViewColumn DisplayMemberBinding="{Binding CmdArguments}" Header="Аргементы" />
-                            <GridViewColumn DisplayMemberBinding="{Binding Path}" Header="Путь" />
-                            <GridViewColumn DisplayMemberBinding="{Binding StartupType}">Тип автозапуска</GridViewColumn>
-                            <GridViewColumn Header="Наличие подписи">
+                            <GridViewColumn DisplayMemberBinding="{Binding Name}">Name</GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding CmdArguments}" Header="Cmd Arguments" />
+                            <GridViewColumn DisplayMemberBinding="{Binding Path}" Header="Path" />
+                            <GridViewColumn DisplayMemberBinding="{Binding StartupType}">Startup Type</GridViewColumn>
+                            <GridViewColumn Header="Has Signature">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <ContentPresenter Content="{Binding IsSignatureExists}" Style="{StaticResource CrossOrCheckCpStyle}" />
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-                            <GridViewColumn Header="Корректность подписи">
+                            <GridViewColumn Header="Signature Validity">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <ContentPresenter Content="{Binding IsSignatureValid}" Style="{StaticResource CrossOrCheckCpStyle}" />
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-                            <GridViewColumn DisplayMemberBinding="{Binding CompanyName}">Компания</GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding CompanyName}">Company Name</GridViewColumn>
                         </GridView>
                     </ListView.View>
                 </ListView>
@@ -106,13 +106,13 @@
                         Margin="5"
                         Padding="5,0,5,0"
                         Command="{Binding UpdateCommand}"
-                        Content="Обновить" />
+                        Content="Update" />
 
                     <Button
                         Margin="5"
                         Padding="5,0,5,0"
                         Command="{Binding ExitCommand}"
-                        Content="Выход" />
+                        Content="Exit" />
                 </StackPanel>
             </Grid>
         </DataTemplate>
